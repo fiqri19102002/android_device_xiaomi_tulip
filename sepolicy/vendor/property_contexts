@@ -5,6 +5,9 @@ audio_hal.in_period_size                u:object_r:vendor_default_prop:s0
 audio_hal.period_multiplier             u:object_r:vendor_default_prop:s0
 persist.audio.fluence.voicecomm         u:object_r:vendor_default_prop:s0
 
+# Dirac
+persist.audio.dirac.                    u:object_r:dirac_prop:s0
+
 # Camera
 cameradaemon.SaveMemAtBoot              u:object_r:vendor_default_prop:s0
 cpp.set.clock                           u:object_r:vendor_default_prop:s0
@@ -37,10 +40,10 @@ ro.miui.                                u:object_r:exported_radio_prop:s0
 ro.product.mod_device                   u:object_r:exported_radio_prop:s0
 
 # Power HAL
-vendor.powerhal.audio                   u:object_r:power_prop:s0
-vendor.powerhal.init                    u:object_r:power_prop:s0
-vendor.powerhal.rendering               u:object_r:power_prop:s0
-vendor.powerhal.state                   u:object_r:power_prop:s0
+vendor.powerhal.audio               u:object_r:power_prop:s0
+vendor.powerhal.init                u:object_r:power_prop:s0
+vendor.powerhal.rendering           u:object_r:power_prop:s0
+vendor.powerhal.state               u:object_r:power_prop:s0
 
 # Thermal engine
 persist.sys.thermal.                    u:object_r:thermal_engine_prop:s0
