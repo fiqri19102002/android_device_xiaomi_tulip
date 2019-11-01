@@ -249,6 +249,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.authsecret@1.0-service
 
+# Lineage overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
