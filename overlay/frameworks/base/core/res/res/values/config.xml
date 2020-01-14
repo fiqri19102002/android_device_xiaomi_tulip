@@ -510,4 +510,7 @@
         C-297.156539,0.363960295 -299.941007,0 -303,0
         Z
     </string>
+
+    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
 </resources>
