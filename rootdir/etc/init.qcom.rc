@@ -66,13 +66,6 @@ on init
     write /sys/block/dm-4/queue/read_ahead_kb 2048
     write /sys/block/dm-5/queue/read_ahead_kb 2048
 
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-3
-    start vendor.configstore-hal
-    start vendor.qti.hardware.display.allocator
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
