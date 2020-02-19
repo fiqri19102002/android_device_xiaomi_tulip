@@ -1,8 +1,8 @@
 # Battery
 genfscon sysfs /devices/soc/c176000.i2c/i2c-2/2-001d                                                                                    u:object_r:sysfs_battery_supply:s0
 
-#Tap to Wake
-genfscon proc /tp_gesture                                                                                                               u:object_r:sysfs_tap_to_wake:s0
+# Tap to Wake
+genfscon sysfs /touchpanel                                                                                                               u:object_r:sysfs_touchpanel:s0
 
 #Fingerprint
 genfscon sysfs /devices/soc/soc:fingerprint_fpc/device_prepare                                                                          u:object_r:sysfs_fingerprint:s0
