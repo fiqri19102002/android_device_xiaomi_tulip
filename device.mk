@@ -175,6 +175,7 @@ PRODUCT_PACKAGES += \
     BluetoothQti \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.4-impl \
@@ -506,6 +507,9 @@ BOARD_HAVE_QCOM_FM := true
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.tulip
+
+# Charger
+include $(LOCAL_PATH)/rootdir/charger/charger.mk
 
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
