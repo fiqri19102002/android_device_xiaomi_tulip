@@ -18,10 +18,10 @@
 <resources>
     <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_top">42.0px</dimen>
+    <dimen name="rounded_corner_radius_top">96px</dimen>
 
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-    <dimen name="rounded_corner_radius_bottom">42.0px</dimen>
-    <dimen name="status_bar_height_portrait">28dp</dimen>
+    <dimen name="status_bar_height_portrait">88dp</dimen>
+    <dimen name="status_bar_height_landscape">28dp</dimen>
 </resources>
