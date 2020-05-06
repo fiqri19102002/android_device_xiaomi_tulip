@@ -511,5 +511,8 @@ BOARD_HAVE_QCOM_FM := true
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# MiuiCamera
+$(call inherit-product, vendor/MiuiCamera/config.mk)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
