@@ -18,7 +18,9 @@
 <resources>	
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
-    <dimen name="system_icons_keyguard_padding_end">10dp</dimen>
+    <dimen name="system_icons_keyguard_padding_end">3dp</dimen>
+
+    <dimen name="rounded_corner_content_padding">4dp</dimen>
 
     <!-- Padding before battery level text in status bar, QS, and Keyguard -->
     <dimen name="battery_level_padding_start">3dp</dimen>
