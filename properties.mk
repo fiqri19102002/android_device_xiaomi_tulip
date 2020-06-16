@@ -81,7 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7 \
-    vendor.audio.adm.buffering.ms=6
+    vendor.audio.adm.buffering.ms=12
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=false \
