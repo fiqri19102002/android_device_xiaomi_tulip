@@ -162,6 +162,11 @@ on boot
     chown system system /persist/speccfg/vendor_persist.prop
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
+    # Smart Charging
+    chown system system /sys/class/power_supply/battery/charging_enabled 
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled 
+    chown system system /sys/class/power_supply/battery/input_suspend 
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 
 #Create folder dump yuv images while debugging
     mkdir /data/vendor/camera 0770 camera camera
@@ -526,5 +531,3 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main
      user root
      group system wakelock
-
-
