@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.power@1.3-service.pixel-libperfmgr",
+    name: "android.hardware.power@1.3-service.tulip-libperfmgr",
     relative_install_path: "hw",
-    vintf_fragments: ["android.hardware.power@1.3-service.pixel.xml"],
-    init_rc: ["android.hardware.power@1.3-service.pixel-libperfmgr.rc"],
+    vintf_fragments: ["android.hardware.power@1.3-service.tulip.xml"],
+    init_rc: ["android.hardware.power@1.3-service.tulip-libperfmgr.rc"],
     srcs: ["service.cpp", "Power.cpp", "InteractionHandler.cpp",
             "power-helper.c"],
     cflags: [
