@@ -187,10 +187,6 @@ TARGET_HAS_NO_POWER_STATS := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_tulip
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
-
 #Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
