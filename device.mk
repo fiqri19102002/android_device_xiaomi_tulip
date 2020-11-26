@@ -92,7 +92,7 @@ TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # Build Type
-export HAVOC_BUILD_TYPE=Official
+export HAVOC_BUILD_TYPE=Unofficial
 
 # Alipay
 PRODUCT_PACKAGES += \
