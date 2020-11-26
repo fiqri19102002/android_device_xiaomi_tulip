@@ -21,7 +21,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/tulip
 
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
@@ -63,8 +63,8 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := whyred_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/tulip
+TARGET_KERNEL_CONFIG := tulip_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM
@@ -75,7 +75,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := whyred
+TARGET_OTA_ASSERT_DEVICE := tulip
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -188,7 +188,7 @@ TARGET_HAS_NO_POWER_STATS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_whyred
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_tulip
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 #Properties
@@ -224,8 +224,8 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 TARGET_USES_MKE2FS := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_tulip
+TARGET_RECOVERY_DEVICE_MODULES := libinit_tulip
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -244,4 +244,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/xiaomi/whyred/BoardConfigVendor.mk
+-include vendor/xiaomi/tulip/BoardConfigVendor.mk

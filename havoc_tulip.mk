@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Inherit from whyred device
-$(call inherit-product, device/xiaomi/whyred/device.mk)
+# Inherit from tulip device
+$(call inherit-product, device/xiaomi/tulip/device.mk)
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
@@ -31,17 +31,17 @@ $(call inherit-product, vendor/MiuiCamera/config.mk)
 # Inherit some common Havoc stuff.
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
-PRODUCT_NAME := havoc_whyred
+PRODUCT_NAME := havoc_tulip
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := whyred
+PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi Note 5
+PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="whyred" \
-    PRODUCT_NAME="whyred" \
+    TARGET_DEVICE="tulip" \
+    PRODUCT_NAME="tulip" \
     PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
 
 BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys
