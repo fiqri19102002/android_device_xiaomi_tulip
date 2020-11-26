@@ -246,7 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.havoc.maintainer=root2raj
+    ro.havoc.maintainer=FiqriArdyansyah
 
 #Listen
 PRODUCT_PROPERTY_OVERRIDES += \
