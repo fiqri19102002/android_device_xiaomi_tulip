@@ -69,13 +69,13 @@ static void init_setup_model_properties() {
         if (buf.find("androidboot.hwc") != std::string::npos) break;
     fin.close();
 
-    if (buf.find("CN") != std::string::npos || buf.find("Global") != std::string::npos) {
+    if (buf.find("Global") != std::string::npos) {
         for (const auto& source : ro_props_default_source_order) {
-            set_ro_product_prop(source, "model", "Redmi Note 5");
+            set_ro_product_prop(source, "model", "Redmi Note 6 Pro");
         }
     } else {
         for (const auto& source : ro_props_default_source_order) {
-            set_ro_product_prop(source, "model", "Redmi Note 5 Pro");
+            set_ro_product_prop(source, "model", "Redmi Note 6 Pro");
         }
     }
 }
