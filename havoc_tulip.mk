@@ -42,7 +42,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="tulip" \
     PRODUCT_NAME="tulip" \
-    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
+    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V11.0.5.0.PEKMIXM release-keys"
 
 BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys
 
