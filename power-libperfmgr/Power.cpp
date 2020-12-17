@@ -33,7 +33,7 @@
 #include "display-helper.h"
 
 #ifndef TAP_TO_WAKE_NODE
-#define TAP_TO_WAKE_NODE "/proc/tp_gesture"
+#define TAP_TO_WAKE_NODE "/sys/touchpanel/double_tap"
 #endif
 
 namespace android {
