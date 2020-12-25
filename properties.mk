@@ -301,3 +301,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=2048
+
+# Video face detect
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.fdvideo=1
