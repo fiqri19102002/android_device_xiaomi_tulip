@@ -114,6 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.depth.focus.cb=0 \
     persist.vendor.camera.exif.make=Xiaomi \
+    persist.vendor.camera.exif.model=Redmi Note 6 Pro \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.imglib.usefdlite=1 \
     persist.vendor.camera.isp.clock.optmz=0 \
