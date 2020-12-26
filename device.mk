@@ -499,7 +499,7 @@ PRODUCT_PACKAGES += \
     libcamera_sdm660_shim
 
 # FM
-BOARD_HAVE_QCOM_FM := true
+BOARD_HAVE_QCOM_FM := false
 
 # USB
 PRODUCT_PACKAGES += \
