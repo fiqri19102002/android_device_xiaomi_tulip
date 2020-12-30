@@ -17,10 +17,9 @@
 
 set -e
 
-DEVICE_COMMON=sdm660-common
 VENDOR=xiaomi
-
-INITIAL_COPYRIGHT_YEAR=2018
+DEVICE=tulip
+DEVICE_BRINGUP_YEAR=2019
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -36,10 +35,10 @@ fi
 . "$HELPER"
 
 # Initialize the common helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "jasmine_sprout jason lavender twolip wayne whyred"
+write_headers "tulip"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
@@ -49,37 +48,3 @@ echo "endif" >> "$PRODUCTMK"
 
 # Finish
 write_footers
-
-if [ -s "$MY_DIR"/../$DEVICE_SPECIFIED_COMMON/proprietary-files.txt ]; then
-    DEVICE_COMMON=$DEVICE_SPECIFIED_COMMON
-
-    # Reinitialize the helper for device specified common
-    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "$DEVICE_SPECIFIED_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
-
-    # Copyright headers and guards
-    write_headers "$DEVICE_SPECIFIED_COMMON_DEVICE"
-
-    # The standard device specified common blobs
-    write_makefiles "$MY_DIR"/../$DEVICE_SPECIFIED_COMMON/proprietary-files.txt true
-
-    # We are done!
-    write_footers
-
-    DEVICE_COMMON=sdm660-common
-fi
-
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false
-
-    # Copyright headers and guards
-    write_headers
-
-    # The standard device blobs
-    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt true
-
-    # We are done!
-    write_footers
-fi
