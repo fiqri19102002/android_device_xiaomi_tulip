@@ -218,7 +218,7 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-11-01
+VENDOR_SECURITY_PATCH := 2020-11-05
 
 # Inherit the proprietary files
 include vendor/xiaomi/tulip/BoardConfigVendor.mk
