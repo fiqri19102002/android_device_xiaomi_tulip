@@ -6,7 +6,26 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/hw/camera.sdm660.so)
+            "${PATCHELF}" --add-needed "libcamera_sdm660_shim.so" "${2}"
+            ;;
+    esac
+}
+
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
+
 set -e
+
+export DEVICE=tulip
+export VENDOR=xiaomi
+
+"./../../${VENDOR}/${DEVICE}/extract-files.sh" "$@"
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -88,7 +107,7 @@ function blob_fixup() {
 
 if [ -z "${ONLY_TARGET}" ] && [ -z "${ONLY_DEVICE_COMMON}" ]; then
     # Initialize the helper for common device
-    setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" ${KANG} --section "${SECTION}"
     extract "${MY_DIR}/proprietary-files-fm.txt" "${SRC}" "${KANG}" --section "${SECTION}"

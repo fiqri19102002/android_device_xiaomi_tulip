@@ -97,6 +97,55 @@ on early-boot
     chmod 0775 /mnt/vendor/persist/data/pfm/licenses
 
 on boot
+    # Camera
+    chmod 0660 /sys/android_camera/sensor
+    chown system system /sys/android_camera/sensor
+
+    # Flash
+    chmod 0660 /sys/class/leds/led:flash_0/brightness
+    chmod 0660 /sys/class/leds/led:flash_1/brightness
+    chmod 0660 /sys/class/leds/led:flash_2/brightness
+    chmod 0660 /sys/class/leds/led:torch_0/brightness
+    chmod 0660 /sys/class/leds/led:torch_1/brightness
+    chmod 0660 /sys/class/leds/led:torch_2/brightness
+    chmod 0660 /sys/class/leds/led:switch_0/brightness
+    chmod 0660 /sys/class/leds/led:switch_1/brightness
+    chmod 0660 /sys/class/leds/flashlight/brightness
+    chown system system /sys/class/leds/led:flash_0/brightness
+    chown system system /sys/class/leds/led:flash_1/brightness
+    chown system system /sys/class/leds/led:flash_2/brightness
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/flashlight/brightness
+
+    # IR
+    chmod 0660 /dev/spidev7.1
+    chown system system /dev/spidev7.1
+
+    # Leds
+    chmod 0640 /sys/class/leds/red/delay_on
+    chmod 0640 /sys/class/leds/red/delay_off
+    chmod 0640 /sys/class/leds/red/breath
+    chown system system /sys/class/leds/red/delay_on
+    chown system system /sys/class/leds/red/delay_off
+    chown system system /sys/class/leds/red/breath
+
+    # Power supply
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/charging_enabled
+
+    # Thermal
+    chmod 0770 /sys/class/power_supply/battery/device/thermalcall
+    chown system system /sys/class/power_supply/battery/device/thermalcall
+
+    # Enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
+
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
@@ -153,7 +202,6 @@ on boot
 
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
-
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
@@ -239,7 +287,6 @@ on post-fs-data
 
     #Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
-
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
