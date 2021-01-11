@@ -601,6 +601,11 @@ vendor/lib/libwfdhdcpcp.so|ba051604d914847b862d78af70d02abf85d86d4b
 vendor/lib/libwfdmmservice.so|87f9c841031272e6a3713abd85326f84d2ae52e5
 vendor/lib/libwfdmodulehdcpsession.so|97ffe7c96970fc5605f4f6414fc31ab7cec78bdc
 
+# Dirac - from xiaomi
+vendor/etc/diracmobile.config
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/soundfx/libdirac.so
+
 # Audio Power Amplifier - from tulip
 vendor/firmware/tas2557_uCDSP.bin
 
