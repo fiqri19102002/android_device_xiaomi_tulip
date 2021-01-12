@@ -494,9 +494,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
-
 # Shims
 PRODUCT_PACKAGES += \
     libcamera_sdm660_shim
