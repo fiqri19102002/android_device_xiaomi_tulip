@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Havoc stuff
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common Arrow stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Inherit from tulip device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := havoc_tulip
+PRODUCT_NAME := arrow_tulip
 PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -39,6 +39,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V12.0.1.0.PEKMIXM release-keys"
 
 BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.201205.008/6943376:user/release-keys"
-
-# Havoc
-export HAVOC_BUILD_TYPE=Unofficial

@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_tulip.mk
+    $(LOCAL_DIR)/arrow_tulip.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_tulip-user \
-    havoc_tulip-userdebug \
-    havoc_tulip-eng
+    arrow_tulip-user \
+    arrow_tulip-userdebug \
+    arrow_tulip-eng
