@@ -154,8 +154,6 @@ on boot
     chmod 0644 /persist/speccfg/vendor_persist.prop
     chmod 0644 /persist/speccfg/submask
     chmod 0644 /persist/speccfg/partition
-    chmod 0666 /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/input_suspend
     chown system system /persist/speccfg/spec
     chown system system /persist/speccfg/devicetype
     chown system system /persist/speccfg/mbnversion
